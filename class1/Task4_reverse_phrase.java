@@ -24,6 +24,4 @@ public class Task4_reverse_phrase {
         arr[swappedIndexL] = arr[swappedIndexR];
         arr[swappedIndexR] = temp;
     }
-    
-    
 }
