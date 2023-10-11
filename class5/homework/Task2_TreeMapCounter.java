@@ -7,7 +7,8 @@ public class Task2_TreeMapCounter {
     public static void main(String[] args) {
         String entries = "Иван Иванов, Светлана Петрова, Кристина Белова, Анна Мусина, Анна Крутова, Иван Юрин, Петр Лыков, Павел Чернов, Петр Чернышов, Мария Федорова, Марина Светлова, Мария Савина, Мария Рыкова, Марина Лугова, Анна Владимирова, Иван Мечников, Петр Петин, Иван Ежов";
         NameCounter counter = initializeCounter(new String[] {entries});
-        System.out.println(counter.getCounterSortedByFrequency());
+        System.out.println(counter.getCounter());
+        System.out.println(counter.getCounterSortedByFrequency().descendingMap());
     }
     
     private static NameCounter initializeCounter(String[] args) {
@@ -59,6 +60,7 @@ class NameCounter {
                 counterSortedByFrequency.get(currentCount).add(name);
             }
         }
+        counterSortedByFrequency.descendingMap();
     }
 
     public HashMap<String, Integer> getCounter() {
