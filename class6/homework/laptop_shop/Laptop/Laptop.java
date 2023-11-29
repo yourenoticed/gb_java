@@ -1,7 +1,6 @@
-package laptop_shop;
+package Laptop;
 
 import java.util.List;
-import java.util.ArrayList;
 
 public class Laptop {
     private String brand;
@@ -43,18 +42,22 @@ public class Laptop {
                 break;
 
             case "priceRUB":
+                if ((parameters.get(1) == "0") && (this.priceRUB >= Integer.parseInt(parameters.get(0)))) return true;
                 if ((this.priceRUB >= Integer.parseInt(parameters.get(0))) && (this.priceRUB <= Integer.parseInt(parameters.get(1)))) return true; 
                 break;
 
             case "cpuFrequencyHZ":
+                if ((parameters.get(1) == "0") && (this.cpuFrequencyHZ >= Integer.parseInt(parameters.get(0)))) return true;
                 if ((this.cpuFrequencyHZ >= Integer.parseInt(parameters.get(0))) && (this.cpuFrequencyHZ <= Integer.parseInt(parameters.get(1)))) return true;
                 break;
 
             case "ramMB":
+                if ((parameters.get(1) == "0") && (this.ramMB >= Integer.parseInt(parameters.get(0)))) return true;
                 if ((this.ramMB >=Integer.parseInt(parameters.get(0))) && (this.ramMB <= Integer.parseInt(parameters.get(1)))) return true;
                 break;
 
             case "storageGB":
+                if ((parameters.get(1) == "0") && (this.storageGB >= Integer.parseInt(parameters.get(0)))) return true;
                 if ((this.storageGB >= Integer.parseInt(parameters.get(0))) && (this.storageGB <= Integer.parseInt(parameters.get(1)))) return true;
                 break;
 

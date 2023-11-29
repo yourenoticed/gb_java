@@ -1,10 +1,10 @@
-package laptop_shop;
+package LaptopShop;
 
 import java.util.Set;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.ArrayList;
+import Laptop.Laptop;
 
 public class LaptopShop {
     private Set<Laptop> allLaptops;
@@ -48,7 +48,7 @@ public class LaptopShop {
     public List<String> getAllBrands() {
         List<String> allBrands = new ArrayList<>();
         for (Laptop laptop : this.allLaptops) {
-            allBrands.add(laptop.getBrand());
+            if (!allBrands.contains(laptop.getBrand())) allBrands.add(laptop.getBrand());
         }
         return allBrands;
     }
@@ -56,7 +56,7 @@ public class LaptopShop {
     public List<String> getFilteredBrands() {
         List<String> filteredBrands = new ArrayList<>();
         for (Laptop laptop : this.filteredLaptops) {
-            filteredBrands.add(laptop.getBrand());
+            if (!filteredBrands.contains(laptop.getBrand())) filteredBrands.add(laptop.getBrand());
         }
         return filteredBrands;
     }
@@ -64,7 +64,7 @@ public class LaptopShop {
     public List<String> getAllModels() {
         List<String> allModels = new ArrayList<>();
         for (Laptop laptop : this.allLaptops) {
-            allModels.add(laptop.getModel());
+            if (!allModels.contains(laptop.getModel())) allModels.add(laptop.getModel());
         }
         return allModels;
     }
@@ -72,7 +72,7 @@ public class LaptopShop {
     public List<String> getFilteredModels() {
         List<String> filteredModels = new ArrayList<>();
         for (Laptop laptop : this.filteredLaptops) {
-            filteredModels.add(laptop.getModels());
+            if (!filteredModels.contains(laptop.getModel())) filteredModels.add(laptop.getModel());
         }
         return filteredModels;
     }
@@ -88,7 +88,7 @@ public class LaptopShop {
     public List<String> getAllOperatingSystems() {
         List<String> allOperatingSystems = new ArrayList<>();
         for (Laptop laptop : this.allLaptops) {
-            allOperatingSystems.add(laptop.getOperatingSystem());
+            if (!allOperatingSystems.contains(laptop.getOperatingSystem())) allOperatingSystems.add(laptop.getOperatingSystem());
         }
         return allOperatingSystems;
     }
@@ -96,7 +96,7 @@ public class LaptopShop {
     public List<String> getFilteredOperatingSystems() {
         List<String> filteredOS = new ArrayList<>();
         for (Laptop laptop : this.filteredLaptops) {
-            filteredOS.add(laptop.getOperatingSystem());
+            if (!filteredOS.contains(laptop.getOperatingSystem())) filteredOS.add(laptop.getOperatingSystem());
         }
         return filteredOS;
     }
